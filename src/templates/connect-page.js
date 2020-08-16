@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 //import Layout from '../components/Layout'
 
-const IndexPage = ({ data }) => {
+const ConnectPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-IndexPage.propTypes = {
+ConnectPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -20,11 +20,11 @@ IndexPage.propTypes = {
   }),
 }
 
-export default IndexPage
+export default ConnectPage
 
-export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+export const connectPageQuery = graphql`
+  query ConnectPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
       }

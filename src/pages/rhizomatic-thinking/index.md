@@ -1,4 +1,5 @@
 ---
-title: Rhizomatic Thinking is the best
-intro: asdf
+templateKey: rhizomatic-thinking-page
+path: /rhizomatic-thinking
+title: Rhizomatic Thinking
 ---

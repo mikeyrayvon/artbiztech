@@ -12,27 +12,114 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-
   - name: "pages"
     label: "Pages"
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"
-        name: "index"
+        name: index
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
+          - label: "Template Key"
+            name: templateKey
+            widget: hidden
+            default: "index-page"
+          - label: Title
+            name: title
+            widget: string
+          - label: Intro
+            name: intro
+            widget: object
+            summary: "{{fields.heading}}"
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Image
+                name: image
+                widget: image
+                required: false
+          - label: "About Sections"
+            name: about
+            widget: list
+            summary: "{{fields.heading}}"
+            label_singular: "about section"
+            required: false
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: markdown
+                buttons: [bold, italic, link, bulleted-list]
+                editorComponents: []
+          - label: Team
+            name: team
+            widget: object
+            summary: "{{fields.heading}}"
+            required: false
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Description
+                name: description
+                widget: markdown
+                minimal: true
+                buttons: [bold, italic, link, bulleted-list]
+                editorComponents: []
+              - label: Members
+                name: members
+                widget: list
+                summary: "{{fields.name}}"
+                label_singular: member
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Image
+                    name: image
+                    widget: image
+          - label: Clients
+            name: clients
+            widget: list
+            summary: "{{fields.company}}"
+            required: false
+            fields:
+              - label: Company
+                name: company
+                widget: string
+              - label: Logo
+                name: logo
+                widget: image
+      - file: "src/pages/rhizomatic-thinking/index.md"
+        label: "Rhizomatic Thinking"
+        name: rhizomatic-thinking
+        fields:
+          - label: "Template Key"
+            name: templateKey
+            widget: hidden
+            default: "rhizomatic-thinking-page"
+          - label: Title
+            name: title
+            widget: string
+          - label: Intro
+            name: intro
+            widget: markdown
+            buttons: [bold, italic, link, heading-two, quote, bulleted-list, numbered-list]
+            editorComponents: [image]
+            required: false
+      - file: "src/pages/connect/index.md"
+        label: "Connect"
+        name: connect
+        fields:
+          - label: "Template Key"
+            name: templateKey
+            widget: hidden
+            default: "connect-page"
+          - label: Title
+            name: title
+            widget: string
