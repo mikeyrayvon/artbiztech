@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: ArtBizTech
+title: ""
 intro:
   heading: ""
 team:
