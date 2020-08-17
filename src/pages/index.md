@@ -2,7 +2,7 @@
 templateKey: index-page
 title: ArtBizTech
 intro:
-  heading: asdf
+  heading: ""
 team:
   heading: asdf
   description: asdf
