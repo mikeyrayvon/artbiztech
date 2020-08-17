@@ -1,4 +1,4 @@
 ---
 templateKey: index-page
-title: asdf
+title: ArtBizTech
 ---
