@@ -4,6 +4,6 @@ title: ArtBizTech
 intro:
   heading: ""
 team:
-  heading: asdf
-  description: asdf
+  heading: ""
+  description: ""
 ---
