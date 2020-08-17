@@ -28,15 +28,16 @@ collections:
           - label: Title
             name: title
             widget: string
+            required: false
           - label: Intro
             name: intro
             widget: object
             summary: "{{fields.heading}}"
-            required: false
             fields:
               - label: Heading
                 name: heading
                 widget: string
+                required: false
               - label: Image
                 name: image
                 widget: image
@@ -46,7 +47,6 @@ collections:
             widget: list
             summary: "{{fields.heading}}"
             label_singular: "about section"
-            required: false
             fields:
               - label: Heading
                 name: heading
@@ -60,17 +60,19 @@ collections:
             name: team
             widget: object
             summary: "{{fields.heading}}"
-            required: false
+
             fields:
               - label: Heading
                 name: heading
                 widget: string
+                required: false
               - label: Description
                 name: description
                 widget: markdown
                 minimal: true
                 buttons: [bold, italic, link, bulleted-list]
                 editorComponents: []
+                required: false
               - label: Members
                 name: members
                 widget: list
@@ -90,7 +92,6 @@ collections:
             name: clients
             widget: list
             summary: "{{fields.company}}"
-            required: false
             fields:
               - label: Company
                 name: company
