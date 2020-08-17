@@ -1,4 +1,4 @@
 ---
 templateKey: index-page
-title: ArtBizTech
+title: ArtBizTechh
 ---
