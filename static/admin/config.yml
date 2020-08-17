@@ -8,6 +8,8 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
+publish_mode: editorial_workflow
+site_url: https://artbiztech.netlify.app
 media_folder: static/img
 public_folder: /img
 
@@ -30,6 +32,7 @@ collections:
             name: intro
             widget: object
             summary: "{{fields.heading}}"
+            required: false
             fields:
               - label: Heading
                 name: heading
