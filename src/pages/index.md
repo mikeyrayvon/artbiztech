@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: ""
+title: asdfasdf
 intro:
   heading: ""
 team:
