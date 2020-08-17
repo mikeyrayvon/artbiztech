@@ -8,11 +8,13 @@ import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
   title
-}) => (
-  <div>
-    <Link to='/'>{title}</Link>
-  </div>
-)
+}) => {
+  return (
+    <>
+      <Link to='/'>{title}</Link>
+    </>
+  )
+}
 
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
