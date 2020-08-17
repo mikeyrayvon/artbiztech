@@ -1,14 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { ConnectPageTemplate } from '../../templates/connect-page'
+
 const ConnectPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (
-      <>
-        <div>{data.title}</div>
-      </>
+      <ConnectPageTemplate
+        title={data.title}
+      />
     )
   } else {
     return <div>Loading...</div>
