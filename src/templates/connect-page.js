@@ -2,13 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
-//import Layout from '../components/Layout'
+import Layout from '../components/Layout'
+
+export const ConnectPageTemplate = ({
+  title
+}) => (
+  <div>
+    <Link to='/'>{title}</Link>
+  </div>
+)
+
+ConnectPageTemplate.propTypes = {
+  title: PropTypes.string,
+}
 
 const ConnectPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <div>{frontmatter.title}</div>
+    <Layout>
+      <ConnectPageTemplate
+        title={frontmatter.title}
+      />
+    </Layout>
   )
 }
 
