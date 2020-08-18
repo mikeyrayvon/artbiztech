@@ -7,11 +7,22 @@ import Img from 'gatsby-image/withIEPolyfill'
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
-  title
+  title,
+  intro,
+  about,
+  team,
+  clients
 }) => {
+  console.log(intro)
   return (
     <>
-      <Link to='/'>{title}</Link>
+      <div className='container'>
+        <Link to='/'>{title}</Link>
+        <div className='grid-row'>
+          <div className='grid-item'>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
